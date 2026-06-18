@@ -31,12 +31,12 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = AudioCNN().to(device)
 # ② そこにセーブデータ（記憶）を流し込む
 # ※weights_only=True は最近のPyTorchで推奨される安全設定です
-model.load_state_dict(torch.load("fsdd_cnn_model.pth", weights_only=True))
+model.load_state_dict(torch.load("C:/Stitch_robot/voice_recog/models/fsdd_cnn_model.pth", weights_only=True))
 # ③ テスト（本番）モードに切り替える
 model.eval()
 
 # librosaを使って、どんな録音でも強制的に「8000Hz」で読み込む
-waveform_numpy, _ = librosa.load("my_voice.wav", sr=8000)
+waveform_numpy, _ = librosa.load("C:/Stitch_robot/voice_recog/my_voice.wav", sr=8000)
 waveform = torch.from_numpy(waveform_numpy).unsqueeze(0).to(device) # AI用のテンソルに変換
 
 # AIが学習した時と「全く同じ設定」のスペクトログラム変換器を作る

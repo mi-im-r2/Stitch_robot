@@ -9,6 +9,7 @@ venv/
 # 学習用データとテスト音声（重いので上げない）
 recordings/
 my_voice.wav
+my_voice2.wav
 
 # AIモデル（もし100MBを超えている場合はアップロードできないため除外推奨）
 fsdd_cnn_model.pth
