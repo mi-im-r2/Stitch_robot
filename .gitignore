@@ -12,3 +12,5 @@ my_voice.wav
 
 # AIモデル（もし100MBを超えている場合はアップロードできないため除外推奨）
 fsdd_cnn_model.pth
+
+chatbot/
